@@ -6,6 +6,6 @@ framework module SesameWatchKitSDK {
 }
 
 module SesameWatchKitSDK.Swift {
-    header "SesameWatchKitSDK-Swift.h"
-    requires objc
+  header "SesameWatchKitSDK-Swift.h"
+  requires objc
 }
