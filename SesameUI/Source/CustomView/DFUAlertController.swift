@@ -8,7 +8,7 @@
 
 import UIKit
 import SesameSDK
-import iOSDFULibrary
+import NordicDFU
 
 class DFUAlertController: UIAlertController {
     fileprivate var dfuType: SesameDeviceType!

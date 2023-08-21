@@ -8,7 +8,7 @@
 
 import Foundation
 import SesameSDK
-import iOSDFULibrary
+import NordicDFU
 import CoreBluetooth
 
 protocol DFUHelperDelegate: class {
@@ -118,7 +118,7 @@ final class DFUHelper {
     
     func start(_ type: DFUFirmwareType = .application) {
         isFinished = false
-        guard let firmware = DFUFirmware(zipFile: zipData, type: type) else {
+            guard let firmware = try? DFUFirmware(zipFile: zipData, type: type) else {
             L.d("No firmware")
             abort()
             delegate?.dfuError(DFUError.fileInvalid,

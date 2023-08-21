@@ -8,7 +8,7 @@
 
 import UIKit
 import SesameSDK
-import iOSDFULibrary
+import NordicDFU
 import CoreBluetooth
 
 class BikeLockSettingViewController: CHBaseViewController {

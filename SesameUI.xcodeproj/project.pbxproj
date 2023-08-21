@@ -169,6 +169,7 @@
 		BEFB1DE1256A6AEF00BF95CB /* CHDeviceManager+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB1DE0256A6AEF00BF95CB /* CHDeviceManager+.swift */; };
 		BEFDB215250D0F7400739B11 /* QRCodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFDB214250D0F7400739B11 /* QRCodeScanViewController.swift */; };
 		BEFF263B249FBA4D00E4E80F /* Notification+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFF263A249FBA4D00E4E80F /* Notification+.swift */; };
+		E816392F2A933402003E33C2 /* NordicDFU in Frameworks */ = {isa = PBXBuildFile; productRef = E816392E2A933402003E33C2 /* NordicDFU */; };
 		E87142D42A8F9D7000AE1A14 /* SesameWatchKitSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87142D32A8F9D7000AE1A14 /* SesameWatchKitSDK.framework */; };
 		E87142D52A8F9D7000AE1A14 /* SesameWatchKitSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E87142D32A8F9D7000AE1A14 /* SesameWatchKitSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E87142D72A8F9D8300AE1A14 /* SesameWatchKitSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87142D32A8F9D7000AE1A14 /* SesameWatchKitSDK.framework */; };
@@ -487,6 +488,7 @@
 				E87142ED2A8F9FE800AE1A14 /* AWSMobileClientXCF in Frameworks */,
 				E87142E72A8F9FE800AE1A14 /* AWSCognitoIdentityProviderASF in Frameworks */,
 				E87142DB2A8F9D9800AE1A14 /* SesameSDK.framework in Frameworks */,
+				E816392F2A933402003E33C2 /* NordicDFU in Frameworks */,
 				8FD89855CCF7CA112387E78E /* Pods_SesameUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1079,6 +1081,7 @@
 				E87142E82A8F9FE800AE1A14 /* AWSCore */,
 				E87142EA2A8F9FE800AE1A14 /* AWSIoT */,
 				E87142EC2A8F9FE800AE1A14 /* AWSMobileClientXCF */,
+				E816392E2A933402003E33C2 /* NordicDFU */,
 			);
 			productName = "sesame-sdk-test-app";
 			productReference = B179690722F7CE9300E91996 /* Sesame.app */;
@@ -1159,6 +1162,7 @@
 			mainGroup = B17968FE22F7CE9300E91996;
 			packageReferences = (
 				E87142E12A8F9FE800AE1A14 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */,
+				E816392D2A933402003E33C2 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */,
 			);
 			productRefGroup = B179690822F7CE9300E91996 /* Products */;
 			projectDirPath = "";
@@ -1939,6 +1943,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E816392D2A933402003E33C2 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NordicSemiconductor/IOS-DFU-Library";
+			requirement = {
+				kind = exactVersion;
+				version = 4.13.0;
+			};
+		};
 		E87142E12A8F9FE800AE1A14 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/aws-amplify/aws-sdk-ios-spm";
@@ -1950,6 +1962,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E816392E2A933402003E33C2 /* NordicDFU */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E816392D2A933402003E33C2 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */;
+			productName = NordicDFU;
+		};
 		E87142E22A8F9FE800AE1A14 /* AWSAPIGateway */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E87142E12A8F9FE800AE1A14 /* XCRemoteSwiftPackageReference "aws-sdk-ios-spm" */;
